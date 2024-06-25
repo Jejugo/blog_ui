@@ -1,4 +1,5 @@
 import "./globals.css"
+import { AuthProvider } from "../context/AuthContext"
 import Navbar from "@/components/Navbar"
 import { ThemeProvider } from "@/context/ThemeContext"
 import MainLayout from "@/layouts/MainLayout"
@@ -14,12 +15,14 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <ThemeProvider>
-            <Navbar />
-            <MainLayout>{children}</MainLayout>
-          </ThemeProvider>
-        </StyledComponentsRegistry>
+        <AuthProvider>
+          <StyledComponentsRegistry>
+            <ThemeProvider>
+              <Navbar />
+              <MainLayout>{children}</MainLayout>
+            </ThemeProvider>
+          </StyledComponentsRegistry>
+        </AuthProvider>
       </body>
     </html>
   )
