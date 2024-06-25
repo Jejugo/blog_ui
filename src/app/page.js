@@ -2,17 +2,18 @@
 
 import styled from "styled-components";
 import MainLayout from "../layouts/MainLayout/index";
-import InitialContent from "@/components/InitialContent";
+import { Inter } from 'next/font/google';
+import FirstBanner from "@/components/FirstBanner";
 
-const Root = styled.div`
-  width: 100%;
-`;
+
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  return <Root> 
-           <MainLayout>
-             {/* <h1> Hey lama dev here! Discover my stories and creative ideas </h1> */}
-             <InitialContent/>
-           </MainLayout>
-         </Root>;
+  return(
+        <MainLayout className={inter.className}>
+          {/* <h1> Hey lama dev here! Discover my stories and creative ideas </h1> */}
+          <FirstBanner/>
+        </MainLayout>
+  );
 }
