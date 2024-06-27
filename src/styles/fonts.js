@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter } from "next/font/google"
 
 // We can import local fonts from next:
 // import localFont from "next/font/local";
@@ -7,6 +7,6 @@ import { Inter } from "next/font/google";
 // const greatVibes = localFont({ src: "./GreatVibes-Regular.ttf" });
 
 // define your variable fonts
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
-export { inter };
+export { inter }

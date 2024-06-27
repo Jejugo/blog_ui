@@ -1,31 +1,32 @@
-"use client";
+"use client"
 
-import { createContext, useState, useContext, useEffect } from "react";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "@/styles/theme";
-import GlobalStyle from "@/styles/globalStyles";
+import { createContext, useState, useContext, useEffect } from "react"
+import { ThemeProvider as StyledThemeProvider } from "styled-components"
 
-const ThemeContext = createContext();
+import GlobalStyle from "@/styles/globalStyles"
+import { lightTheme, darkTheme } from "@/styles/theme"
+
+const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("light")
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("theme")
     if (savedTheme) {
-      return setTheme(savedTheme);
+      return setTheme(savedTheme)
     }
 
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    localStorage.setItem("theme", theme)
+  }, [theme])
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-  };
+    const newTheme = theme === "light" ? "dark" : "light"
+    setTheme(newTheme)
+    localStorage.setItem("theme", newTheme)
+  }
 
-  const resetTheme = () => localStorage.removeItem("theme");
+  const resetTheme = () => localStorage.removeItem("theme")
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, resetTheme }}>
@@ -34,7 +35,7 @@ export const ThemeProvider = ({ children }) => {
         {children}
       </StyledThemeProvider>
     </ThemeContext.Provider>
-  );
-};
+  )
+}
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => useContext(ThemeContext)
