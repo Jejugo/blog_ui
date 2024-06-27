@@ -18,7 +18,7 @@ const commonStyles = {
     medium: "24px",
     large: "32px",
   },
-};
+}
 
 export const lightTheme = {
   colors: {
@@ -36,7 +36,7 @@ export const lightTheme = {
     },
   },
   ...commonStyles,
-};
+}
 
 export const darkTheme = {
   colors: {
@@ -54,4 +54,4 @@ export const darkTheme = {
     },
   },
   ...commonStyles,
-};
+}
