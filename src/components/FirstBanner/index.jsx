@@ -1,26 +1,27 @@
-import React, { useState } from "react";
-import niceView from "../../images/nice_view.jpeg";
-import Image from "next/image";
-import styled from "styled-components";
+import Image from "next/image"
+import React, { useState } from "react"
+import styled from "styled-components"
+
+import niceView from "../../images/nice_view.jpeg"
 
 const Title = styled.h1`
   font-size: 48px;
-`;
+`
 
 const BannerWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 35px;
-`;
+`
 
 const BannerSection = styled.div`
   font-size: 24px;
   text-align: left;
-`;
+`
 
 const BannerButton = styled.button`
   background-color: rgb(216, 216, 216);
-  color: rgb(51,51,51);
+  color: rgb(51, 51, 51);
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -30,11 +31,11 @@ const BannerButton = styled.button`
   font-weight: bold;
 
   &:hover {
-    background-color: rgb(51,51,51);
+    background-color: rgb(51, 51, 51);
     color: rgb(216, 216, 216);
     transition: 0.5s ease;
   }
-`;
+`
 
 export default function FirstBanner() {
   return (
@@ -56,5 +57,5 @@ export default function FirstBanner() {
         </BannerSection>
       </BannerWrapper>
     </>
-  );
+  )
 }
