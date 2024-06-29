@@ -1,7 +1,6 @@
 "use client"
 
 import { Inter } from "next/font/google"
-import styled from "styled-components"
 
 import MainLayout from "../layouts/MainLayout/index"
 import FirstBanner from "@/components/FirstBanner"

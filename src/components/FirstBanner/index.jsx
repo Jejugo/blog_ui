@@ -1,5 +1,4 @@
 import Image from "next/image"
-import React, { useState } from "react"
 import styled from "styled-components"
 
 import niceView from "../../images/nice_view.jpeg"
