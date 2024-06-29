@@ -1,5 +1,6 @@
 import "./globals.css"
 import { ThemeProvider } from "@/context/ThemeContext"
+import MainLayout from "@/layouts/MainLayout"
 import StyledComponentsRegistry from "@/lib/registry"
 import { inter } from "@/styles/fonts"
 
@@ -13,7 +14,9 @@ const RootLayout = ({ children }) => {
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <MainLayout>{children}</MainLayout>
+          </ThemeProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
