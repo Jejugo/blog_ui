@@ -1,5 +1,7 @@
 "use client"
 
+import FirstBanner from "@/components/FirstBanner"
+
 export default function Home() {
-  return <div>Home</div>
+  return <FirstBanner />
 }

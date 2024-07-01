@@ -3,11 +3,16 @@ const commonStyles = {
     small: "8px",
     medium: "16px",
     large: "24px",
+    xlarge: "36px",
+    xxlarge: "48px",
   },
   fontSizes: {
-    small: "12px",
-    medium: "16px",
-    large: "24px",
+    small: "16px",
+    medium: "24px",
+    large: "32px",
+    xlarge: "48px",
+    xxlarge: "56px",
+    xxxlarge: "76px",
   },
   fontWeights: {
     normal: 400,
@@ -17,6 +22,17 @@ const commonStyles = {
     small: "16px",
     medium: "24px",
     large: "32px",
+  },
+  radius: {
+    xsmall: "5px",
+    small: "10px",
+    medium: "15px",
+  },
+  buttonSize: {
+    small: "122px",
+    medium: "148px",
+    large: "169px",
+    xlarge: "216px",
   },
 }
 
