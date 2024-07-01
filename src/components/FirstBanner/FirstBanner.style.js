@@ -1,35 +1,54 @@
 import styled from "styled-components"
 
-export const Title = styled.h1`
-  font-size: 48px;
+export const Title = styled.div`
+  font-size: ${({ theme }) => theme.fontSizes.xxxlarge};
   text-align: justify;
+  margin: ${({ theme }) => theme.spacings.xxlarge} auto;
+`
+
+export const SubTitle = styled.div`
+  font-size: ${({ theme }) => theme.fontSizes.large};
+  text-align: left;
+  margin: ${({ theme }) => theme.spacings.small} auto;
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
+`
+
+export const Text = styled.div`
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  text-align: left;
+  margin: ${({ theme }) => theme.spacings.medium} auto;
 `
 
 export const BannerWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: ${({ theme }) => theme.spacings.xlarge};
+  margin-botton: ${({ theme }) => theme.spacings.xlarge};
 `
 
 export const BannerSection = styled.div`
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.fontSizes.medium};
   text-align: left;
 `
 
 export const BannerButton = styled.button`
-  background-color: rgb(216, 216, 216);
-  color: rgb(51, 51, 51);
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: ${({ theme }) =>
+    theme.colors.secondaryBackground}; //rgb(216, 216, 216);
+  color: ${({ theme }) => theme.colors.text}; //rgb(51, 51, 51);
+  padding: ${({ theme }) => theme.spacings.medium}
+    ${({ theme }) => theme.spacings.large};
+  border-radius: ${({ theme }) => theme.radius.xsmall};
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fontSizes.small};
   transition: 0.5s ease;
-  font-weight: bold;
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
+  margin: ${({ theme }) => theme.spacings.large} auto;
 
   &:hover {
-    background-color: rgb(51, 51, 51);
-    color: rgb(216, 216, 216);
+    background-color: ${({ theme }) =>
+      theme.button.primary.backgroundColorHover};
+    color: ${({ theme }) => theme.button.primary.colorHover};
     transition: 0.5s ease;
   }
 `
