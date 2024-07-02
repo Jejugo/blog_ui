@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  display: flex;
   float: right;
   gap: ${({ theme }) => theme.spacings.medium};
   margin: ${({ theme }) => theme.spacings.xlarge} auto;
@@ -9,15 +8,14 @@ export const Wrapper = styled.div`
 `
 
 export const Text = styled.div`
-  display: block;
   font-size: ${({ theme }) => theme.fontSizes.small};
-  align-items: right;
+  text-align: left;
   margin-right: 0;
 `
 
 export const Title = styled.div`
-  display: block;
-  font-size: ${({ theme }) => theme.fontSizes.large};
-  text-align: justify;
-  margin: ${({ theme }) => theme.spacings.xxlarge} auto;
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  text-align: left;
+  margin: ${({ theme }) => theme.spacings.small} auto;
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
 `
