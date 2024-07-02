@@ -5,6 +5,8 @@ export const Main = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 60vw;
+  margin: 0 auto;
 `
 
 export const Icons = styled.div`
@@ -30,6 +32,6 @@ export const LinkIcons = styled(Link)`
 
 export const LinkPages = styled(Link)`
   color: #000000;
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
 `

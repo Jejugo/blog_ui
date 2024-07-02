@@ -1,3 +1,5 @@
+"use client"
+
 import facebook from "@public/icons/facebook.png"
 import instagram from "@public/icons/instagram.png"
 import tiktok from "@public/icons/tiktok.png"

@@ -1,4 +1,5 @@
 import "./globals.css"
+import Navbar from "@/components/Navbar"
 import { ThemeProvider } from "@/context/ThemeContext"
 import MainLayout from "@/layouts/MainLayout"
 import StyledComponentsRegistry from "@/lib/registry"
@@ -15,6 +16,7 @@ const RootLayout = ({ children }) => {
       <body className={inter.className}>
         <StyledComponentsRegistry>
           <ThemeProvider>
+            <Navbar />
             <MainLayout>{children}</MainLayout>
           </ThemeProvider>
         </StyledComponentsRegistry>
