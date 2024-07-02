@@ -49,10 +49,10 @@ export default function Navbar() {
 
       {/* Div que contém os botões */}
       <S.Buttons>
-        <S.LinkPages href="/home">Home</S.LinkPages>
+        <S.LinkPages href="/">Home</S.LinkPages>
         <S.LinkPages href="/contact">Contact</S.LinkPages>
         <S.LinkPages href="/about">About</S.LinkPages>
-        <S.LinkPages href="/home">Login</S.LinkPages>
+        <S.LinkPages href="/login">Login</S.LinkPages>
       </S.Buttons>
     </S.Main>
   )

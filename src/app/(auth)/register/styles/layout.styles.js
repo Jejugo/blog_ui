@@ -6,14 +6,14 @@ export const LayoutWrapper = styled.div`
   height: 95vh;
 `
 
-export const LoginLayout = styled.div`
+export const RegisterLayout = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.secondaryBackground};
   align-items: center;
   padding: 0px 50px;
   width: 350px;
-  height: 50%;
+  height: 55%;
   margin: 0 auto;
   box-shadow:
     0 2px 2px 0 rgba(0, 0, 0, 0.14),

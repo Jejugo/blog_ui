@@ -15,7 +15,6 @@ export const LoginLayout = styled.div`
   width: 350px;
   height: 50%;
   margin: 0 auto;
-  border: 0.1px solid grey;
   box-shadow:
     0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12),

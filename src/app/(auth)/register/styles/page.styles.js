@@ -4,7 +4,6 @@ export const RegisterForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100% - 200px);
 `
 
 export const RegisterSection = styled.section`
@@ -19,7 +18,7 @@ export const RegisterFormInput = styled.div`
 
 export const RegisterTitle = styled.h1`
   text-align: center;
-  padding: 20px 0px;
+  padding: 10px 0px;
   font-size: 30px;
 `
 
