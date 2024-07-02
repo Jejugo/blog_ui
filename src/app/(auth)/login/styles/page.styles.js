@@ -20,14 +20,14 @@ export const LoginFormField = styled.div`
 export const LoginTitle = styled.h1`
   text-align: center;
   padding: 20px 0px;
-  font-size: 30px;
+  font-size: ${({ theme }) => theme.fontSizes.medium};
 `
 
 export const LoginInput = styled.input`
   width: 100%;
   height: 40px;
   border: none;
-  border-radius: 5px;
+  border-radius: ${({ theme }) => theme.radius.xsmall};
   padding: 0px 10px;
   box-sizing: border-box;
   box-shadow:
@@ -51,12 +51,12 @@ export const LoginButtonWrapper = styled.div`
 export const GoogleLoginButton = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: ${({ theme }) => theme.spacings.xlarge};
 `
 
 export const LoginInputErrorMessage = styled.p`
   margin: 0;
   color: red;
-  font-size: 14px;
-  margin: 5px 0px;
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  margin: ${({ theme }) => theme.spacings.small} 0px;
 `

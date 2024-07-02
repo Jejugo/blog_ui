@@ -19,14 +19,14 @@ export const RegisterFormInput = styled.div`
 export const RegisterTitle = styled.h1`
   text-align: center;
   padding: 10px 0px;
-  font-size: 30px;
+  font-size: ${({ theme }) => theme.fontSizes.medium};
 `
 
 export const RegisterInput = styled.input`
   width: 100%;
   height: 40px;
   border: none;
-  border-radius: 5px;
+  border-radius: ${({ theme }) => theme.radius.xsmall};
   padding: 0px 10px;
   box-sizing: border-box;
   box-shadow:
@@ -44,7 +44,7 @@ export const RegisterInput = styled.input`
 export const RegisterInputErrorMessage = styled.p`
   margin: 0;
   color: red;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.fontSizes.small};
   margin: 5px 0px;
 `
 

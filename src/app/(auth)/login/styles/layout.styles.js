@@ -9,7 +9,7 @@ export const LayoutWrapper = styled.div`
 export const LoginLayout = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #f8f8f8;
+  background-color: ${({ theme }) => theme.colors.secondaryBackground};
   align-items: center;
   padding: 0px 50px;
   width: 350px;
