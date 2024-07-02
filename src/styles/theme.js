@@ -1,5 +1,6 @@
 const commonStyles = {
   spacings: {
+    xsmall: "5px",
     small: "8px",
     medium: "16px",
     large: "24px",
