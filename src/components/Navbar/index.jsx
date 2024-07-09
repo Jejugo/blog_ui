@@ -9,6 +9,7 @@ import Image from "next/image"
 import React from "react"
 
 import * as S from "./Navbar.style"
+import { useAuth } from "@/context/AuthContext"
 import { useTheme } from "@/context/ThemeContext"
 
 const socialIcons = [
@@ -37,6 +38,7 @@ const socialIcons = [
 export default function Navbar() {
   const { toggleTheme, theme } = useTheme()
   const isChecked = theme === "dark"
+  const { isAuthenticated } = useAuth()
 
   return (
     <S.Main>
@@ -58,7 +60,11 @@ export default function Navbar() {
         <S.LinkPages href="/">Home</S.LinkPages>
         <S.LinkPages href="/contact">Contact</S.LinkPages>
         <S.LinkPages href="/about">About</S.LinkPages>
-        <S.LinkPages href="/login">Login</S.LinkPages>
+        {isAuthenticated ? (
+          <S.LinkPages href="/write">Write</S.LinkPages>
+        ) : (
+          <S.LinkPages href="/login">Login</S.LinkPages>
+        )}
       </S.Buttons>
     </S.Main>
   )
