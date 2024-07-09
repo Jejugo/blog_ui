@@ -1,11 +1,15 @@
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded"
 import Link from "next/link"
 import styled from "styled-components"
+
+import breakpoint from "@/styles/breakpoints"
 
 export const Main = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 60vw;
+  height: 60px;
   margin: 0 auto;
 `
 
@@ -15,8 +19,23 @@ export const Icons = styled.div`
 `
 
 export const Title = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes.large};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
+
+  @media screen and (max-width: ${breakpoint.laptopL}) {
+    font-size: ${({ theme }) => theme.fontSizes.large};
+  }
+
+  @media screen and (max-width: ${breakpoint.laptop}) {
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+  }
+
+  @media screen and (max-width: ${breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.small};
+  }
+
+  @media screen and (max-width: ${breakpoint.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.small};
+  }
 `
 
 export const Buttons = styled.div`
@@ -31,8 +50,47 @@ export const LinkIcons = styled(Link)`
   position: relative;
 `
 
+export const MenuHamburguer = styled.div`
+  display: none;
+
+  @media screen and (max-width: ${breakpoint.tablet}) {
+    display: block;
+  }
+`
+
+export const MenuButton = styled.button`
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+`
+
+export const MenuIcon = styled(MenuRoundedIcon)`
+  color: ${({ theme }) => theme.colors.text};
+`
+
+export const MenuOptions = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: ${({ theme }) => theme.colors.secondaryBackground};
+`
+
+export const MenuItem = styled(Link)`
+  color: ${({ theme }) => theme.colors.text};
+  font-size: ${({ theme }) => theme.fontSizes.large};
+`
+
 export const LinkPages = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
+
+  @media screen and (max-width: ${breakpoint.tablet}) {
+    display: none;
+  }
 `
