@@ -1,5 +1,6 @@
 import "./globals.css"
 import { AuthProvider } from "../context/AuthContext"
+import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import { ThemeProvider } from "@/context/ThemeContext"
 import MainLayout from "@/layouts/MainLayout"
@@ -20,6 +21,7 @@ const RootLayout = ({ children }) => {
             <ThemeProvider>
               <Navbar />
               <MainLayout>{children}</MainLayout>
+              <Footer />
             </ThemeProvider>
           </StyledComponentsRegistry>
         </AuthProvider>

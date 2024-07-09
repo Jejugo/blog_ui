@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 import * as S from "./FirstBanner.style"
 import niceView from "../../images/nice_view.jpeg"
 
@@ -8,11 +6,16 @@ export default function FirstBanner() {
     <>
       <>
         <S.Title>
-          <b>Hey lava dev here!</b> Discover my stories and creative ideas.
+          <b>Hey!</b> Discover my stories and creative ideas.
         </S.Title>
       </>
       <S.BannerWrapper>
-        <Image src={niceView} alt="nice view" width={450} height={500} />
+        <S.StyledImage
+          src={niceView}
+          alt="nice view"
+          width={450}
+          height={500}
+        />
         <S.BannerSection>
           <S.SubTitle>Simple Ways to Inspire Your Inner Innovator</S.SubTitle>
           <S.Text>

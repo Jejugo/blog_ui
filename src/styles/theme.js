@@ -14,8 +14,10 @@ const commonStyles = {
     xlarge: "48px",
     xxlarge: "56px",
     xxxlarge: "76px",
+    title: "96px",
   },
   fontWeights: {
+    light: 300,
     normal: 400,
     bold: 700,
   },
