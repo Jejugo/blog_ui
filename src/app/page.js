@@ -1,5 +1,3 @@
-"use client"
-
 import FirstBanner from "@/components/FirstBanner"
 
 export default function Home() {

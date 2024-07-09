@@ -1,9 +1,30 @@
+"use client"
+import Image from "next/image"
 import styled from "styled-components"
 
+import breakpoint from "@/styles/breakpoints"
+
 export const Title = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes.xxxlarge};
-  text-align: justify;
+  font-size: ${({ theme }) => theme.fontSizes.title};
+  font-weight: ${({ theme }) => theme.fontWeights.light};
   margin: ${({ theme }) => theme.spacings.xxlarge} auto;
+  text-align: left;
+
+  @media screen and (max-width: ${breakpoint.laptopL}) {
+    font-size: ${({ theme }) => theme.fontSizes.xxxlarge};
+  }
+
+  @media screen and (max-width: ${breakpoint.laptop}) {
+    font-size: ${({ theme }) => theme.fontSizes.xxlarge};
+  }
+
+  @media screen and (max-width: ${breakpoint.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.xlarge};
+  }
+
+  @media screen and (max-width: ${breakpoint.mobile}) {
+    font-size: ${({ theme }) => theme.fontSizes.large};
+  }
 `
 
 export const SubTitle = styled.div`
@@ -49,5 +70,13 @@ export const BannerButton = styled.button`
       theme.button.primary.backgroundColorHover};
     color: ${({ theme }) => theme.button.primary.colorHover};
     transition: 0.5s ease;
+  }
+`
+
+export const StyledImage = styled(Image)`
+  object-fit: cover;
+
+  @media screen and (max-width: ${breakpoint.laptop}) {
+    display: none;
   }
 `
