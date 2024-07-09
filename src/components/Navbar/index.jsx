@@ -1,5 +1,6 @@
 "use client"
 
+import Switch from "@mui/material/Switch"
 import facebook from "@public/icons/facebook.png"
 import instagram from "@public/icons/instagram.png"
 import tiktok from "@public/icons/tiktok.png"
@@ -8,6 +9,7 @@ import Image from "next/image"
 import React from "react"
 
 import * as S from "./Navbar.style"
+import { useTheme } from "@/context/ThemeContext"
 
 const socialIcons = [
   {
@@ -33,6 +35,9 @@ const socialIcons = [
 ]
 
 export default function Navbar() {
+  const { toggleTheme, theme } = useTheme()
+  const isChecked = theme === "dark"
+
   return (
     <S.Main>
       {/* Div que contém os ícones */}
@@ -49,6 +54,7 @@ export default function Navbar() {
 
       {/* Div que contém os botões */}
       <S.Buttons>
+        <Switch {...""} onChange={() => toggleTheme()} checked={isChecked} />
         <S.LinkPages href="/">Home</S.LinkPages>
         <S.LinkPages href="/contact">Contact</S.LinkPages>
         <S.LinkPages href="/about">About</S.LinkPages>

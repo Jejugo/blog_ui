@@ -22,6 +22,7 @@ export const Title = styled.div`
 export const Buttons = styled.div`
   display: flex;
   gap: 10px;
+  align-items: center;
 `
 
 export const LinkIcons = styled(Link)`
@@ -31,7 +32,7 @@ export const LinkIcons = styled(Link)`
 `
 
 export const LinkPages = styled(Link)`
-  color: #000000;
+  color: ${({ theme }) => theme.colors.text};
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
 `
