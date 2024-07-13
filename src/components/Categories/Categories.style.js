@@ -8,7 +8,6 @@ export const Containter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacings.medium};
   margin: ${({ theme }) => theme.spacings.xlarge} auto;
 `
@@ -20,6 +19,9 @@ export const Title = styled.h2`
   margin-top: ${({ theme }) => theme.spacings.xlarge};
 `
 export const ContainerButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: ${({ theme }) =>
     theme.colors.secondaryBackground}; //rgb(216, 216, 216);
   color: ${({ theme }) => theme.colors.text}; //rgb(51, 51, 51);
