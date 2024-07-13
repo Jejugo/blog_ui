@@ -36,8 +36,6 @@ export default function MostPopular() {
       {mostPopular.map((item, index) => (
         <PopularItem item={item} key={index} />
       ))}
-      <S.Text>Discover by topic</S.Text>
-      <S.Title>Categories</S.Title>
     </S.Wrapper>
   )
 }

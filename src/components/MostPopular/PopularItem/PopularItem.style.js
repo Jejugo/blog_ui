@@ -21,12 +21,7 @@ export const MetaData = styled.div`
   margin: 0 auto;
 `
 
-export const Author = styled.p`
-  margin-top: 0;
-  margin-bottom: ${({ theme }) => theme.spacings.medium};
-`
-
-export const Date = styled.p`
+export const AuthorNDate = styled.p`
   margin-top: 0;
   margin-bottom: ${({ theme }) => theme.spacings.medium};
 `
