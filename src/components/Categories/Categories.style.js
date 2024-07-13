@@ -22,9 +22,8 @@ export const ContainerButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) =>
-    theme.colors.secondaryBackground}; //rgb(216, 216, 216);
-  color: ${({ theme }) => theme.colors.text}; //rgb(51, 51, 51);
+  background-color: ${({ theme }) => theme.colors.secondaryBackground};
+  color: ${({ theme }) => theme.colors.text};
   padding: ${({ theme }) => theme.spacings.medium}
     ${({ theme }) => theme.spacings.large};
   border-radius: ${({ theme }) => theme.radius.xsmall};
