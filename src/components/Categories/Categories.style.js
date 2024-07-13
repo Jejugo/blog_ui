@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
 `
 export const Containter = styled.div`
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   gap: ${({ theme }) => theme.spacings.medium};
@@ -32,7 +33,7 @@ export const ContainerButton = styled.button`
   font-size: ${({ theme }) => theme.fontSizes.small};
   transition: 0.5s ease;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-  width: ${({ theme }) => theme.buttonSize.large};
+  width: ${({ theme }) => theme.buttonSize.xxlarge};
 
   &:hover {
     background-color: ${({ theme }) =>

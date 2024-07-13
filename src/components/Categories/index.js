@@ -11,32 +11,32 @@ import world from "../../images/World.png"
 export const categories = [
   {
     id: "Fashion",
-    image: <Image src={fashionMan} alt="Fashion Man" width={35} height={35} />,
+    image: <Image src={fashionMan} alt="Fashion Man" width={50} height={50} />,
     color: "#FF6961",
   },
   {
     id: "Food",
-    image: <Image src={pasta} alt="Pasta" width={35} height={35} />,
+    image: <Image src={pasta} alt="Pasta" width={50} height={50} />,
     color: "#77DD77",
   },
   {
     id: "Coding",
-    image: <Image src={computer} alt="computer" width={35} height={35} />,
+    image: <Image src={computer} alt="computer" width={50} height={50} />,
     color: "#FDFD96",
   },
   {
     id: "Style",
-    image: <Image src={sunGlasses} alt="sunGlasses" width={35} height={35} />,
+    image: <Image src={sunGlasses} alt="sunGlasses" width={50} height={50} />,
     color: "#84B6F4",
   },
   {
     id: "Travel",
-    image: <Image src={kombi} alt="kombi" width={35} height={35} />,
+    image: <Image src={kombi} alt="kombi" width={50} height={50} />,
     color: "#FDCAE1",
   },
   {
     id: "Culture",
-    image: <Image src={world} alt="world" width={35} height={35} />,
+    image: <Image src={world} alt="world" width={50} height={50} />,
     color: "#95B8F6",
   },
 ]
