@@ -38,11 +38,12 @@ const socialIcons = [
 
 export default function Navbar() {
   const { toggleTheme, theme } = useTheme()
-  const isChecked = theme === "dark"
   const { isAuthenticated } = useAuth()
   const pathname = usePathname()
+  const [isOpen, setOpen] = useState((prevstate) => !prevstate)
 
-  const [isOpen, setOpen] = useState(false)
+  const isChecked = theme === "dark"
+
   const handleOpen = () => {
     setOpen(!isOpen)
   }
@@ -65,7 +66,7 @@ export default function Navbar() {
         <S.Title>blog-ui</S.Title>
 
         <S.Buttons>
-          <Switch {...""} onChange={() => toggleTheme()} checked={isChecked} />
+          <Switch onChange={toggleTheme} checked={isChecked} />
           <S.MenuHamburguer>
             <S.MenuButton onClick={handleOpen}>
               <S.MenuIcon />
