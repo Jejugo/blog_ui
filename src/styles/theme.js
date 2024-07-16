@@ -39,6 +39,7 @@ const commonStyles = {
     xlarge: "216px",
     xxlarge: "256px",
   },
+  screenWidth: "85vw",
 }
 
 export const lightTheme = {
