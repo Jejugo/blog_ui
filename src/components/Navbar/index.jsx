@@ -49,7 +49,7 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    setOpen((prevstate) => !prevstate)
+    setOpen(false)
   }, [pathname])
 
   return (
