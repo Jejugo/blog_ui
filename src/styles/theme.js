@@ -44,10 +44,19 @@ const commonStyles = {
 
 export const lightTheme = {
   colors: {
-    primary: "#0070f3",
+    primary: "#000000",
+    secondary: "#626262",
     background: "#ffffff",
     secondaryBackground: "#f8f8f8",
     text: "#000000",
+  },
+  categories: {
+    fashion: "#FECCCC",
+    food: "#D9FFC9",
+    coding: "#FFF2B9",
+    style: "#B9CEFF",
+    travel: "#FDCAE1",
+    culture: "#BBFDFF",
   },
   button: {
     primary: {
@@ -62,7 +71,8 @@ export const lightTheme = {
 
 export const darkTheme = {
   colors: {
-    primary: "#0f172a",
+    primary: "#ffffff",
+    secondary: " #a6a6a6",
     background: "#0f172a",
     secondaryBackground: "#010b22",
     text: "#ffffff",
@@ -74,6 +84,14 @@ export const darkTheme = {
       color: "white",
       colorHover: "black",
     },
+  },
+  categories: {
+    fashion: "#6A1011",
+    food: "#17155B",
+    coding: "#5F4F15",
+    style: "#42155F",
+    travel: "#531345",
+    culture: "#134E53",
   },
   ...commonStyles,
 }
