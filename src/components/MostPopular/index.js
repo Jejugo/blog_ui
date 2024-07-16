@@ -1,7 +1,7 @@
 import * as S from "./MostPopular.style"
 import PopularItem from "./PopularItem"
 
-export const mostPopular = [
+const mostPopular = [
   {
     category: "Travel",
     title: "A Journey Through Bohemiam Beauty: Exploring the Streets of Prague",

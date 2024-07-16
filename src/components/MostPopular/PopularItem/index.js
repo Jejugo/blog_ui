@@ -8,7 +8,7 @@ export default function PopularItem({ item }) {
       <S.Title>{item.title}</S.Title>
       <S.MetaData>
         <S.AuthorNDate>
-          {item.author} {item.date}
+          {item.author} - {item.date}
         </S.AuthorNDate>
       </S.MetaData>
     </S.Wrapper>

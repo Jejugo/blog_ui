@@ -54,7 +54,7 @@ export const BannerSection = styled.div`
 
 export const BannerButton = styled.button`
   background-color: ${({ theme }) => theme.colors.secondaryBackground};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primary};
   padding: ${({ theme }) => theme.spacings.medium}
     ${({ theme }) => theme.spacings.large};
   border-radius: ${({ theme }) => theme.radius.xsmall};

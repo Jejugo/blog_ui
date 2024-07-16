@@ -12,6 +12,8 @@ export const Category = styled.div`
 
 export const Title = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.small};
+  font-weight: ${({ theme }) => theme.fontWeights.normal};
+  color: ${({ theme }) => theme.colors.secondary};
 `
 
 export const MetaData = styled.div`

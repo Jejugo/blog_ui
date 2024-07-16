@@ -8,7 +8,6 @@ export const Containter = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center;
   gap: ${({ theme }) => theme.spacings.medium};
   margin: ${({ theme }) => theme.spacings.xlarge} auto;
 `
@@ -23,8 +22,9 @@ export const ContainerButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.color};
-  color: ${({ theme }) => theme.colors.text};
+  background-color: ${({ theme, name }) =>
+    theme.categories[name.toLowerCase()]};
+  color: ${({ theme }) => theme.colors.primary};
   padding: ${({ theme }) => theme.spacings.medium}
     ${({ theme }) => theme.spacings.large};
   border-radius: ${({ theme }) => theme.radius.xsmall};

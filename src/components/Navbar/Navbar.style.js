@@ -63,7 +63,7 @@ export const MenuButton = styled.button`
 `
 
 export const MenuIcon = styled(MenuRoundedIcon)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primary};
 `
 
 export const MenuOptions = styled.div`
@@ -79,12 +79,12 @@ export const MenuOptions = styled.div`
 `
 
 export const MenuItem = styled(Link)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes.large};
 `
 
 export const LinkPages = styled(Link)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
 
