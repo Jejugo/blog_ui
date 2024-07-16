@@ -37,6 +37,7 @@ const commonStyles = {
     medium: "148px",
     large: "169px",
     xlarge: "216px",
+    xxlarge: "256px",
   },
 }
 
