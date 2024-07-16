@@ -8,7 +8,7 @@ export const Main = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60vw;
+  width: ${({ theme }) => theme.screenWidth};
   height: 60px;
   margin: 0 auto;
 `
@@ -20,10 +20,7 @@ export const Icons = styled.div`
 
 export const Title = styled.div`
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-
-  @media screen and (max-width: ${breakpoint.laptopL}) {
-    font-size: ${({ theme }) => theme.fontSizes.large};
-  }
+  font-size: ${({ theme }) => theme.fontSizes.large};
 
   @media screen and (max-width: ${breakpoint.laptop}) {
     font-size: ${({ theme }) => theme.fontSizes.medium};
