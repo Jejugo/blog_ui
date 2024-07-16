@@ -23,7 +23,7 @@ export const ContainerButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.secondaryBackground};
+  background-color: ${(props) => props.color};
   color: ${({ theme }) => theme.colors.text};
   padding: ${({ theme }) => theme.spacings.medium}
     ${({ theme }) => theme.spacings.large};
