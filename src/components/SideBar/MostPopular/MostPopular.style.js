@@ -3,14 +3,11 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  float: right;
   gap: ${({ theme }) => theme.spacings.small};
-  margin: ${({ theme }) => theme.spacings.small} auto;
-  width: 30%;
 `
 
 export const Text = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.small};
   text-align: left;
   margin-right: 0;
   margin: ${({ theme }) => theme.spacings.medium} auto;
