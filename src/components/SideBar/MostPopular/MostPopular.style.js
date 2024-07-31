@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 export const Wrapper = styled.div`
   gap: ${({ theme }) => theme.spacings.small};
+  margin: ${({ theme }) => theme.spacings.small} auto;
 `
 
 export const Text = styled.div`

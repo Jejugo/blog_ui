@@ -1,12 +1,12 @@
 import Image from "next/image"
 
 import * as S from "./Categories.style"
-import computer from "../../images/Computer.png"
-import fashionMan from "../../images/Fashion_Man.png"
-import kombi from "../../images/Kombi.png"
-import pasta from "../../images/Pasta.png"
-import sunGlasses from "../../images/SunGlasses.png"
-import world from "../../images/World.png"
+import computer from "@/images/Computer.png"
+import fashionMan from "@/images/Fashion_Man.png"
+import kombi from "@/images/Kombi.png"
+import pasta from "@/images/Pasta.png"
+import sunGlasses from "@/images/SunGlasses.png"
+import world from "@/images/World.png"
 
 export const categories = [
   {
