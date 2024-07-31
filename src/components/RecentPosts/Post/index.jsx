@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 import * as S from "./Post.style"
 import Flex from "@/components/Flex"
 import Tag from "@/components/Tag"
@@ -5,7 +7,12 @@ import Tag from "@/components/Tag"
 export default function Post({ postItem }) {
   return (
     <S.Wrapper>
-      <S.StyledImage src={postItem.image} alt={postItem.title} />
+      <Image
+        src={postItem.image}
+        alt={postItem.title}
+        height={250}
+        width={250}
+      />
       <Flex
         direction="column"
         justifyContent="space-evenly"

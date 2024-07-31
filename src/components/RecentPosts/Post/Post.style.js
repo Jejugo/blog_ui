@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import styled from "styled-components"
 
@@ -13,11 +12,6 @@ export const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.small};
   color: ${({ theme }) => theme.colors.secondary};
   text-align: left;
-`
-
-export const StyledImage = styled(Image)`
-  width: 250px;
-  height: 250px;
 `
 
 export const MetaData = styled.div`

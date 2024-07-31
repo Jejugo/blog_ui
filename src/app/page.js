@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <FirstBanner />
       <Categories />
-      <Flex gap={"20px"} alignItems={"flex-start"}>
+      <Flex gap="20px" alignItems="flex-start">
         <RecentPosts />
         <S.SideBar>
           <MostPopular />

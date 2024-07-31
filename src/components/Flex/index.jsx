@@ -2,10 +2,10 @@ import * as S from "./Flex.style"
 
 export default function Flex({
   children,
-  justifyContent = "center",
-  alignItems = "center",
-  gap = 0,
-  direction = "row",
+  justifyContent,
+  alignItems,
+  gap,
+  direction,
 }) {
   return (
     <S.FlexStyle

@@ -45,13 +45,11 @@ const posts = [
 ]
 export default function MostPopular() {
   return (
-    <>
-      <S.Wrapper>
-        <S.Title>Recent Posts</S.Title>
-        {posts.map((item, index) => (
-          <Post postItem={item} key={index} />
-        ))}
-      </S.Wrapper>
-    </>
+    <S.Wrapper>
+      <S.Title>Recent Posts</S.Title>
+      {posts.map((item, index) => (
+        <Post postItem={item} key={index} />
+      ))}
+    </S.Wrapper>
   )
 }
