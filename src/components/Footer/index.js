@@ -1,5 +1,6 @@
 "use client"
 
+import lama from "@images/llama_icon.png"
 import facebook from "@public/icons/facebook.png"
 import instagram from "@public/icons/instagram.png"
 import tiktok from "@public/icons/tiktok.png"
@@ -36,12 +37,16 @@ export default function Footer() {
     <S.FooterWrapper>
       <S.Blog>
         <S.HeaderWrapper>
-          <S.Image>Imagem</S.Image>
+          <S.StyledImage src={lama} alt="Lama" height={60} width={60} />
           <S.Title>Lamablog</S.Title>
         </S.HeaderWrapper>
         <S.Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-          facilisis, nibh sed dictum egestas.
+          {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          facilisis, nibh sed dictum egestas. Ut in lacus libero. Sed
+          efficitur odio id elit fringilla, non aliquam nisi elementum. Nulla
+          facilisi. Sed ultrices, nunc sit amet tincidunt tincidunt, nulla
+          justo ultrices nisi, quis tincidunt nunc orci at nibh. Nulla
+          facilisi. Nulla facilisi.`}
         </S.Description>
         <S.SocialIcons>
           {socialIcons.map((socialIcon, index) => (
