@@ -10,6 +10,7 @@ export const FooterWrapper = styled.footer`
   padding-left: 100px;
   padding-right: 100px;
   gap: 100px;
+  margin-top: 100px;
   padding-bottom: 20px;
 `
 export const Description = styled.div``

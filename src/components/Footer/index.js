@@ -41,12 +41,12 @@ export default function Footer() {
           <S.Title>Lamablog</S.Title>
         </S.HeaderWrapper>
         <S.Description>
-          {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-          facilisis, nibh sed dictum egestas. Ut in lacus libero. Sed
-          efficitur odio id elit fringilla, non aliquam nisi elementum. Nulla
-          facilisi. Sed ultrices, nunc sit amet tincidunt tincidunt, nulla
-          justo ultrices nisi, quis tincidunt nunc orci at nibh. Nulla
-          facilisi. Nulla facilisi.`}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          facilisis, nibh sed dictum egestas. Ut in lacus libero. Sed efficitur
+          odio id elit fringilla, non aliquam nisi elementum. Nulla facilisi.
+          Sed ultrices, nunc sit amet tincidunt tincidunt, nulla justo ultrices
+          nisi, quis tincidunt nunc orci at nibh. Nulla facilisi. Nulla
+          facilisi.
         </S.Description>
         <S.SocialIcons>
           {socialIcons.map((socialIcon, index) => (
