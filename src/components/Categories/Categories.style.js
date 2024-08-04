@@ -6,8 +6,10 @@ export const Wrapper = styled.div`
 `
 export const Containter = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   align-items: center;
+  justify-content: center;
   gap: ${({ theme }) => theme.spacings.medium};
   margin: ${({ theme }) => theme.spacings.xlarge} auto;
 `
@@ -33,7 +35,7 @@ export const ContainerButton = styled.button`
   font-size: ${({ theme }) => theme.fontSizes.small};
   transition: 0.5s ease;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-  width: ${({ theme }) => theme.buttonSize.xxlarge};
+  width: ${({ theme }) => theme.buttonSize.xlarge};
 
   &:hover {
     background-color: ${({ theme }) =>
