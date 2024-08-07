@@ -13,7 +13,6 @@ export const FooterWrapper = styled.footer`
   margin-top: 100px;
   padding-bottom: 20px;
 `
-export const Description = styled.div``
 
 export const Blog = styled.div`
   flex: 3;
@@ -66,7 +65,7 @@ export const BlogLinks = styled.div`
   gap: 10px;
 `
 
-export const CategorieLinks = styled.div`
+export const CategoryLinks = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
