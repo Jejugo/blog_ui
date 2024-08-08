@@ -22,15 +22,15 @@ export const Title = styled.div`
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   font-size: ${({ theme }) => theme.fontSizes.large};
 
-  @media screen and (max-width: ${breakpoint.laptop}) {
+  @media screen and (width < ${breakpoint.laptop}) {
     font-size: ${({ theme }) => theme.fontSizes.medium};
   }
 
-  @media screen and (max-width: ${breakpoint.tablet}) {
+  @media screen and (width < ${breakpoint.tablet}) {
     font-size: ${({ theme }) => theme.fontSizes.small};
   }
 
-  @media screen and (max-width: ${breakpoint.mobile}) {
+  @media screen and (width < ${breakpoint.mobile}) {
     font-size: ${({ theme }) => theme.fontSizes.small};
   }
 `
@@ -48,7 +48,7 @@ export const LinkIcons = styled(Link)`
 `
 
 export const MenuHamburguer = styled.div`
-  @media screen and (min-width: ${breakpoint.tablet}) {
+  @media screen and (width > ${breakpoint.tablet}) {
     display: none;
   }
 `
@@ -85,7 +85,7 @@ export const LinkPages = styled(Link)`
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
 
-  @media screen and (max-width: ${breakpoint.tablet}) {
+  @media screen and (width < ${breakpoint.tablet}) {
     display: none;
   }
 `
