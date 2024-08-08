@@ -48,7 +48,7 @@ export const LinkIcons = styled(Link)`
 `
 
 export const MenuHamburguer = styled.div`
-  @media screen and (min-width: ${breakpoint.tablet}) {
+  @media screen and (width > ${breakpoint.tablet}) {
     display: none;
   }
 `
