@@ -6,6 +6,7 @@ export default function Flex({
   alignItems,
   gap,
   direction,
+  ...styles
 }) {
   return (
     <S.FlexStyle
@@ -13,6 +14,7 @@ export default function Flex({
       alignItems={alignItems}
       gap={gap}
       direction={direction}
+      style={{ ...styles }}
     >
       {children}
     </S.FlexStyle>
