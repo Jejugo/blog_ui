@@ -3,7 +3,6 @@ import * as S from "./RecentPosts.style"
 import computer from "@/images/Computer.png"
 import fashionMan from "@/images/Fashion_Man.png"
 import kombi from "@/images/Kombi.png"
-import pasta from "@/images/Pasta.png"
 
 const posts = [
   {
@@ -33,16 +32,12 @@ const posts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
-  {
-    image: pasta,
-    date: "05-01-2023",
-    category: "Food",
-    title: "Navigating First Impressions: Introduce Yourself",
-    link: "/",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
 ]
+// Mudar isso aqui para pegar da requisição
+const firstPage = false
+
+const lastPage = true
+
 export default function MostPopular() {
   return (
     <S.Wrapper>
@@ -50,6 +45,11 @@ export default function MostPopular() {
       {posts.map((item, index) => (
         <Post postItem={item} key={index} />
       ))}
+      <S.Buttons>
+        <S.Button disabled={firstPage}>Prev</S.Button>
+        <S.Page>1 / 3</S.Page>
+        <S.Button disabled={lastPage}>Next</S.Button>
+      </S.Buttons>
     </S.Wrapper>
   )
 }
