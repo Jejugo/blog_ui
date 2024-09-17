@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react"
 import Post from "./Post"
 import * as S from "./RecentPosts.style"
 
-// função pra reuquisição do banco
-// getPage(1)
-
 export default function RecentPosts() {
   const [page, setPage] = useState(1)
   const [posts, setPosts] = useState([])
