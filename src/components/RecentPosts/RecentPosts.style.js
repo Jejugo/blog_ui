@@ -26,6 +26,7 @@ export const Wrapper = styled.div`
 export const Buttons = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 90%;
   margin: ${({ theme }) => theme.spacings.small} auto;
 `
 

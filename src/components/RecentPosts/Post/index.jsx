@@ -15,15 +15,17 @@ export default function Post({ postItem }) {
       />
       <Flex
         direction="column"
-        justifyContent="space-evenly"
+        justifyContent="space-between"
         alignItems="flex-start"
       >
         <S.MetaData>
           <S.Date>{postItem.date}</S.Date>
           <Tag category={postItem.category} link="http://google.com.br" />
         </S.MetaData>
-        <S.Title>{postItem.title}</S.Title>
-        <S.Description>{postItem.description}</S.Description>
+        <div>
+          <S.Title>{postItem.title}</S.Title>
+          <S.Description>{postItem.description}</S.Description>
+        </div>
         <S.StyledLink href={postItem.link}>Read more</S.StyledLink>
       </Flex>
     </S.Wrapper>

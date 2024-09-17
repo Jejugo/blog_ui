@@ -9,7 +9,6 @@ export const Containter = styled.div`
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
-  justify-content: center;
   gap: ${({ theme }) => theme.spacings.medium};
   margin: ${({ theme }) => theme.spacings.xlarge} auto;
 `

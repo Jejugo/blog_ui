@@ -1,4 +1,4 @@
-const commonStyles = {
+export const commonStyles = {
   spacings: {
     xsmall: "5px",
     small: "8px",

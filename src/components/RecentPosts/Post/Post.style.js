@@ -12,6 +12,7 @@ export const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.small};
   color: ${({ theme }) => theme.colors.secondary};
   text-align: left;
+  margin: 0;
 `
 
 export const MetaData = styled.div`
@@ -25,11 +26,14 @@ export const Title = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.large};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   text-align: left;
+  margin: 0;
 `
 
 export const Wrapper = styled.div`
   display: flex;
-  margin: ${({ theme }) => theme.spacings.small} auto;
+  max-height: 250px;
+  width: 90%;
+  gap: ${({ theme }) => theme.spacings.small};
 `
 
 export const StyledLink = styled(Link)`
