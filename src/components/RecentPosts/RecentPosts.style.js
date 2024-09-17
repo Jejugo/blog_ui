@@ -36,8 +36,7 @@ export const Button = styled.button`
   font-size: ${({ theme }) => theme.fontSizes.medium};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   color: ${({ theme }) => theme.colors.primary};
-  margin: ${({ theme }) => theme.spacings.medium}
-    ${({ theme }) => theme.spacings.medium};
+  margin: ${({ theme }) => `0px ${theme.spacings.medium}`};
 
   &:disabled {
     cursor: not-allowed;
