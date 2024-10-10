@@ -10,8 +10,8 @@ export default function Flex({
 }) {
   return (
     <S.FlexStyle
-      justifyContent={justifyContent}
-      alignItems={alignItems}
+      justifycontent={justifyContent}
+      alignitems={alignItems}
       gap={gap}
       direction={direction}
       style={{ ...styles }}

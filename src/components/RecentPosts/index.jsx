@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-import Post from "./Post"
+import Post from "./RecentPost"
 import * as S from "./RecentPosts.style"
 import Flex from "@/components/Flex"
 import { commonStyles } from "@/styles/theme"
