@@ -1,5 +1,5 @@
 import * as S from "./FirstBanner.style"
-import niceView from "../../images/nice_view.jpeg"
+import niceView from "../../../images/nice_view.jpeg"
 
 export default function FirstBanner() {
   return (
