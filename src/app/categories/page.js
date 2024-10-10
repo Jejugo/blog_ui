@@ -46,15 +46,14 @@ export default function Categories({ searchParams }) {
           )
           const { posts: requestPosts } = await data.json()
           console.log(requestPosts)
-
+          if (requestPosts.length > 10) {
+            setIsLastPage(true)
+          }
           setPostsData(requestPosts)
         } catch (err) {
           console.log("error:", err)
         } finally {
           setIsLoading(false)
-          if (requestPosts.length > 10) {
-            setIsLastPage(true)
-          }
         }
       }, 2000)
     }
