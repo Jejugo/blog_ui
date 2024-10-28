@@ -63,7 +63,7 @@ export default function Navbar() {
           ))}
         </S.Icons>
 
-        <S.Title>blog-ui</S.Title>
+        <S.Title href="/">blog-ui</S.Title>
 
         <S.Buttons>
           <Switch onChange={toggleTheme} checked={isChecked} />

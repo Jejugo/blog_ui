@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 import * as S from "./Categories.style"
 import computer from "@/images/Computer.png"
@@ -42,12 +43,20 @@ export const categories = [
 ]
 
 export default function Categories() {
+  const router = useRouter()
+
   return (
     <>
       <S.Title>Popular Categories</S.Title>
       <S.Containter>
         {categories.map((category, index) => (
-          <S.ContainerButton key={index} name={category.name}>
+          <S.ContainerButton
+            key={index}
+            name={category.name}
+            onClick={() =>
+              router.push(`/categories?cat=${category.name.toLowerCase()}`)
+            }
+          >
             {category.image} {category.name}
           </S.ContainerButton>
         ))}
