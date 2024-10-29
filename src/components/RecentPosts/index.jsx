@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 
-import Post from "./RecentPost"
 import * as S from "./RecentPosts.style"
 import Flex from "@/components/Flex"
+import Post from "@/components/Posts/Post"
 import { commonStyles } from "@/styles/theme"
 
 export default function RecentPosts() {
