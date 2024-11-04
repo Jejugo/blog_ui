@@ -1,6 +1,8 @@
+
 import Image from "next/image"
 
 import * as S from "./Categories.style"
+import CategoryTag from "@/components/CategoryTag"
 import computer from "@/images/Computer.png"
 import fashionMan from "@/images/Fashion_Man.png"
 import kombi from "@/images/Kombi.png"
@@ -47,9 +49,12 @@ export default function Categories() {
       <S.Title>Popular Categories</S.Title>
       <S.Containter>
         {categories.map((category, index) => (
-          <S.ContainerButton key={index} name={category.name}>
-            {category.image} {category.name}
-          </S.ContainerButton>
+          <CategoryTag
+            category={category.name}
+            type="largeButton"
+            icon={category.image}
+            key={index}
+          />
         ))}
       </S.Containter>
     </>

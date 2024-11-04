@@ -18,7 +18,7 @@ export const Icons = styled.div`
   gap: 10px;
 `
 
-export const Title = styled.div`
+export const Title = styled(Link)`
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   font-size: ${({ theme }) => theme.fontSizes.large};
 

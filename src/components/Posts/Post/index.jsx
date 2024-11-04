@@ -1,8 +1,8 @@
 import Image from "next/image"
 
 import * as S from "./Post.style"
+import CategoryTag from "@/components/CategoryTag"
 import Flex from "@/components/Flex"
-import Tag from "@/components/Tag"
 
 export default function Post({ postItem }) {
   return (
@@ -20,7 +20,7 @@ export default function Post({ postItem }) {
       >
         <S.MetaData>
           <S.Date>{postItem.date}</S.Date>
-          <Tag category={postItem.category} link="http://google.com.br" />
+          <CategoryTag category={postItem.category} />
         </S.MetaData>
         <div>
           <S.Title>{postItem.title}</S.Title>

@@ -1,5 +1,6 @@
 import * as S from "./CategoriesSideBar.style"
 import { categories } from "../../Categories"
+import CategoryTag from "@/components/CategoryTag"
 
 export default function CategoriesSideBar() {
   return (
@@ -8,9 +9,9 @@ export default function CategoriesSideBar() {
       <S.Title>Categories</S.Title>
       <S.Categories>
         {categories.map((category, index) => (
-          <S.CategoriesSideBarButton key={index} name={category.name}>
+          <CategoryTag key={index} category={category.name} type="button">
             {category.name}
-          </S.CategoriesSideBarButton>
+          </CategoryTag>
         ))}
       </S.Categories>
     </S.Wrapper>

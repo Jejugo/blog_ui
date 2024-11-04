@@ -9,7 +9,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import * as S from "./Footer.style"
-import Flex from "@/Components/Flex"
+import Flex from "@/components/Flex"
 
 const socialIcons = [
   {
