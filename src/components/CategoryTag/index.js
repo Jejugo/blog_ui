@@ -20,7 +20,7 @@ export default function CategoryTag({ category, type = "tag", icon = null }) {
 
   if (type === "tag")
     return (
-      <S.Tag category={category}>
+      <S.Tag $category={category}>
         <S.StyledLink href={`/categories?cat=${category.toLowerCase()}`}>
           {category}
         </S.StyledLink>

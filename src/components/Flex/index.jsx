@@ -10,10 +10,10 @@ export default function Flex({
 }) {
   return (
     <S.FlexStyle
-      justifyContent={justifyContent}
-      alignItems={alignItems}
-      gap={gap}
-      direction={direction}
+      $justifyContent={justifyContent}
+      $alignItems={alignItems}
+      $gap={gap}
+      $direction={direction}
       style={{ ...styles }}
     >
       {children}
