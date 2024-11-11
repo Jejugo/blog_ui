@@ -6,10 +6,12 @@ export default function Flex({
   alignItems,
   gap,
   direction,
+  className,
   ...styles
 }) {
   return (
     <S.FlexStyle
+      className={className}
       $justifyContent={justifyContent}
       $alignItems={alignItems}
       $gap={gap}

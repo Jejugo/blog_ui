@@ -1,15 +1,21 @@
 import Image from "next/image"
 import styled from "styled-components"
 
+import Flex from "@/components/Flex"
+import breakpoint from "@/styles/breakpoints"
+
 const StyledDescription = styled.div`
   text-align: left;
 `
 
-const FeaturedCategoryPost = styled.div`
-  display: flex;
+const FeaturedCategoryPost = styled(Flex)`
   align-items: center;
   margin: ${({ theme }) => theme.spacings.large} auto;
   gap: ${({ theme }) => theme.spacings.large};
+  @media screen and (max-width: ${breakpoint.tablet}) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `
 
 const FeaturedPost = () => {
