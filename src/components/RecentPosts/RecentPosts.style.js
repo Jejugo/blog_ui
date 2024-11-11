@@ -2,12 +2,18 @@
 
 import styled from "styled-components"
 
+import breakpoint from "@/styles/breakpoints"
+
 export const Title = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.large};
   text-align: left;
   margin: ${({ theme }) => theme.spacings.small} auto;
   margin-bottom: ${({ theme }) => theme.spacings.xlarge};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
+
+  @media screen and (width < ${breakpoint.tablet}) {
+    text-align: center;
+  }
 `
 
 export const Page = styled.div`
@@ -42,5 +48,15 @@ export const Button = styled.button`
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
+  }
+`
+
+export const RecentPostsList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacings.large};
+
+  @media screen and (width < ${breakpoint.tablet}) {
+    align-items: center;
   }
 `

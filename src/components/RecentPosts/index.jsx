@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 import * as S from "./RecentPosts.style"
-import Flex from "@/components/Flex"
 import Post from "@/components/Posts/Post"
-import { commonStyles } from "@/styles/theme"
 
 export default function RecentPosts() {
   const [page, setPage] = useState(1)
@@ -40,11 +38,11 @@ export default function RecentPosts() {
   return (
     <S.Wrapper>
       <S.Title>Recent Posts</S.Title>
-      <Flex direction="column" gap={commonStyles.spacings.large}>
+      <S.RecentPostsList>
         {posts.map((item, index) => (
           <Post postItem={item} key={index} />
         ))}
-      </Flex>
+      </S.RecentPostsList>
 
       <S.Buttons>
         <S.Button

@@ -2,17 +2,24 @@
 
 import styled from "styled-components"
 
+import breakpoint from "@/styles/breakpoints"
+
 export const Wrapper = styled.div`
   display: flex;
   aign-items: center;
 `
-export const Containter = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
   gap: ${({ theme }) => theme.spacings.medium};
   margin: ${({ theme }) => theme.spacings.xlarge} auto;
+
+  @media screen and (width < ${breakpoint.tablet}) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
 export const Title = styled.h2`

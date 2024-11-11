@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 
 import * as S from "./Categories.style"
@@ -47,7 +46,7 @@ export default function Categories() {
   return (
     <>
       <S.Title>Popular Categories</S.Title>
-      <S.Containter>
+      <S.Container>
         {categories.map((category, index) => (
           <CategoryTag
             category={category.name}
@@ -56,7 +55,7 @@ export default function Categories() {
             key={index}
           />
         ))}
-      </S.Containter>
+      </S.Container>
     </>
   )
 }

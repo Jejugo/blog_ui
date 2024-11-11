@@ -37,9 +37,9 @@ const socialIcons = [
 export default function Footer() {
   return (
     <S.FooterWrapper>
-      <Flex gap="100px">
+      <Flex gap="100px" flexWrap="wrap">
         <Flex flex="3" direction="column" gap="15px">
-          <Flex gap={"20px"} alignItems={"center"}>
+          <S.FooterTitle>
             <Image
               src={lama}
               alt="Lama"
@@ -48,7 +48,7 @@ export default function Footer() {
               style={{ borderRadius: "50%" }}
             />
             <S.Title>Lamablog</S.Title>
-          </Flex>
+          </S.FooterTitle>
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             facilisis, nibh sed dictum egestas. Ut in lacus libero. Sed
@@ -57,7 +57,7 @@ export default function Footer() {
             justo ultrices nisi, quis tincidunt nunc orci at nibh. Nulla
             facilisi. Nulla facilisi.
           </div>
-          <Flex gap="10px">
+          <S.FooterMediaIcons>
             {socialIcons.map((socialIcon, index) => (
               <Link href={socialIcon.link} key={index}>
                 <Image
@@ -68,16 +68,10 @@ export default function Footer() {
                 />
               </Link>
             ))}
-          </Flex>
+          </S.FooterMediaIcons>
         </Flex>
 
-        <Flex
-          flex="2"
-          justifyContent="space-between"
-          alignItems="center"
-          margin="0 auto"
-          padding="0 20px"
-        >
+        <S.FooterLinks>
           <Flex direction="column" gap="10px">
             <S.LinkTitle>Link</S.LinkTitle>
             <Link href="/">Homepage</Link>
@@ -100,7 +94,7 @@ export default function Footer() {
               </Link>
             ))}
           </Flex>
-        </Flex>
+        </S.FooterLinks>
       </Flex>
     </S.FooterWrapper>
   )

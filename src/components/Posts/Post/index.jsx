@@ -1,10 +1,13 @@
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 import * as S from "./Post.style"
 import CategoryTag from "@/components/CategoryTag"
 import Flex from "@/components/Flex"
 
 export default function Post({ postItem }) {
+  const router = useRouter()
+
   return (
     <S.Wrapper>
       <Image
@@ -23,10 +26,12 @@ export default function Post({ postItem }) {
           <CategoryTag category={postItem.category} />
         </S.MetaData>
         <div>
-          <S.Title>{postItem.title}</S.Title>
+          <S.Title onClick={() => router.push(`/post/${postItem.id}`)}>
+            {postItem.title}
+          </S.Title>
           <S.Description>{postItem.description}</S.Description>
         </div>
-        <S.StyledLink href={postItem.link}>Read more</S.StyledLink>
+        <S.StyledLink href={`/post/${postItem.id}`}>Read more</S.StyledLink>
       </Flex>
     </S.Wrapper>
   )

@@ -1,12 +1,20 @@
 import Image from "next/image"
 import styled from "styled-components"
 
-import Flex from "@/components/Flex"
-const StyledDescription = styled.div``
+const StyledDescription = styled.div`
+  text-align: left;
+`
+
+const FeaturedCategoryPost = styled.div`
+  display: flex;
+  align-items: center;
+  margin: ${({ theme }) => theme.spacings.large} auto;
+  gap: ${({ theme }) => theme.spacings.large};
+`
 
 const FeaturedPost = () => {
   return (
-    <Flex gap="20px">
+    <FeaturedCategoryPost>
       <Image
         src="https://upload.wikimedia.org/wikipedia/commons/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg"
         width={350}
@@ -22,7 +30,7 @@ const FeaturedPost = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </StyledDescription>
-    </Flex>
+    </FeaturedCategoryPost>
   )
 }
 
