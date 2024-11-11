@@ -1,23 +1,8 @@
 import * as S from "./Flex.style"
 
-export default function Flex({
-  children,
-  justifyContent,
-  alignItems,
-  gap,
-  direction,
-  className,
-  ...styles
-}) {
+export default function Flex({ children, className, ...styles }) {
   return (
-    <S.FlexStyle
-      className={className}
-      $justifyContent={justifyContent}
-      $alignItems={alignItems}
-      $gap={gap}
-      $direction={direction}
-      style={{ ...styles }}
-    >
+    <S.FlexStyle className={className} style={{ ...styles }}>
       {children}
     </S.FlexStyle>
   )

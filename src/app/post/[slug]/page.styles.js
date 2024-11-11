@@ -3,6 +3,9 @@
 import Image from "next/image"
 import styled from "styled-components"
 
+import Flex from "@/components/Flex"
+import breakpoint from "@/styles/breakpoints"
+
 export const Title = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.large};
   text-align: left;
@@ -20,9 +23,8 @@ export const StyledImage = styled(Image)`
   border-radius: ${({ theme }) => theme.radius.small};
 `
 
-export const PostTitle = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+export const PostHeader = styled(Flex)`
+  @media screen and (width < ${breakpoint.mobile}) {
+    flex-wrap: wrap;
+  }
 `

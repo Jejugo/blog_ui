@@ -18,19 +18,19 @@ export default async function Post({ params }) {
   const { post } = await getData(slug)
 
   return (
-    <Flex direction="column">
-      <Flex gap="20px">
-        <S.PostTitle>
+    <Flex flexDirection="column">
+      <S.PostHeader gap="20px">
+        <Flex flexDirection="column" justifyContent="space-between" flex={1}>
           <S.Title>{post.title}</S.Title>
           <S.Text>{post.author}</S.Text>
-        </S.PostTitle>
+        </Flex>
         <S.StyledImage
           src={post.image}
           alt={post.title}
           height={250}
           width={250}
         />
-      </Flex>
+      </S.PostHeader>
       <Flex gap="50px" alignItems="flex-start">
         <div style={{ flex: 5 }}>
           <h1>Content</h1>

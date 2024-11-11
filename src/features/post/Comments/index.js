@@ -2,9 +2,8 @@
 
 import { useState } from "react"
 
-import { TextArea } from "./comments.styled"
+import * as S from "./comments.styled"
 import Button from "@/components/Button"
-import Flex from "@/components/Flex"
 
 export default function Comments() {
   const [comments, setComments] = useState([])
@@ -14,8 +13,8 @@ export default function Comments() {
     <>
       <h1>Comments</h1>
       <div>
-        <Flex alignItems="center" gap="20px">
-          <TextArea onChange={(e) => setTextAreaValue(e.target.value)} />
+        <S.CommentSection alignItems="center" gap="20px">
+          <S.TextArea onChange={(e) => setTextAreaValue(e.target.value)} />
           <Button
             onClick={() =>
               setComments((prevState) => [
@@ -29,7 +28,7 @@ export default function Comments() {
           >
             Send
           </Button>
-        </Flex>
+        </S.CommentSection>
 
         {comments.map((comment, index) => {
           return (
