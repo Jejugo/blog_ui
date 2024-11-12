@@ -17,7 +17,7 @@ export default function Post({ postItem }) {
         width={250}
       />
       <Flex
-        direction="column"
+        flexDirection="column"
         justifyContent="space-between"
         alignItems="flex-start"
       >

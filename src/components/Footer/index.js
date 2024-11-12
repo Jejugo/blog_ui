@@ -38,7 +38,7 @@ export default function Footer() {
   return (
     <S.FooterWrapper>
       <Flex gap="100px" flexWrap="wrap">
-        <Flex flex="3" direction="column" gap="15px">
+        <Flex flex="3" flexDirection="column" gap="15px">
           <S.FooterTitle>
             <Image
               src={lama}
