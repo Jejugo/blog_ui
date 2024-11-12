@@ -72,21 +72,21 @@ export default function Footer() {
         </Flex>
 
         <S.FooterLinks>
-          <Flex direction="column" gap="10px">
+          <Flex flexDirection="column" gap="10px">
             <S.LinkTitle>Link</S.LinkTitle>
             <Link href="/">Homepage</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
           </Flex>
-          <Flex direction="column" gap="10px">
+          <Flex flexDirection="column" gap="10px">
             <S.LinkTitle>Tags</S.LinkTitle>
             <Link href="/style">Style</Link>
             <Link href="/fashion">Fashion</Link>
             <Link href="/coding">Coding</Link>
             <Link href="/travel">Travel</Link>
           </Flex>
-          <Flex direction="column" gap="10px">
+          <Flex flexDirection="column" gap="10px">
             <S.LinkTitle>Social</S.LinkTitle>
             {socialIcons.map((socialIcon, index) => (
               <Link href={socialIcon.link} key={index}>
