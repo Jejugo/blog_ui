@@ -80,12 +80,21 @@ export const MenuItem = styled(Link)`
   font-size: ${({ theme }) => theme.fontSizes.large};
 `
 
-export const LinkPages = styled(Link)`
-  color: ${({ theme }) => theme.colors.primary};
+const LinkStyle = `
+   color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
 
   @media screen and (width < ${breakpoint.tablet}) {
     display: none;
   }
+`
+
+export const LinkPages = styled(Link)`
+  ${LinkStyle}
+`
+
+export const AnchorLink = styled.a`
+  ${LinkStyle}
+  cursor: pointer;
 `
