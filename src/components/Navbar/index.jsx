@@ -48,6 +48,10 @@ export default function Navbar() {
     setOpen((prevstate) => !prevstate)
   }
 
+  const handleLogout = () => {
+    logout()
+  }
+
   useEffect(() => {
     setOpen(false)
   }, [pathname])
@@ -79,7 +83,7 @@ export default function Navbar() {
           {isAuthenticated ? (
             <>
               <S.LinkPages href="/write">Write</S.LinkPages>
-              <S.AnchorLink onClick={logout}>Log out</S.AnchorLink>
+              <S.AnchorLink onClick={handleLogout}>Log out</S.AnchorLink>
             </>
           ) : (
             <S.LinkPages href="/login">Log in</S.LinkPages>
@@ -92,7 +96,7 @@ export default function Navbar() {
           <S.MenuItem href="/">Home</S.MenuItem>
           <S.MenuItem href="/contact">Contact</S.MenuItem>
           <S.MenuItem href="/about">About</S.MenuItem>
-          {isAuthenticated ? (
+          {isLoggedIn ? (
             <S.MenuItem href="/write">Write</S.MenuItem>
           ) : (
             <S.MenuItem href="/login">Login</S.MenuItem>

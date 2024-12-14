@@ -1,15 +1,14 @@
 "use client"
 
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 import React, { createContext, useState, useEffect, useContext } from "react"
 
 const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [username, setUsername] = useState(null)
-  const [email, setEmail] = useState(null)
   const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     const token = localStorage.getItem("token")
@@ -18,7 +17,7 @@ export const AuthProvider = ({ children }) => {
     } else {
       setIsAuthenticated(false)
     }
-  }, [])
+  }, [pathname])
 
   const checkAuth = () => {
     const token = localStorage.getItem("token")
@@ -32,12 +31,8 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem("token")
-    router.push("/")
-  }
-
-  const setCredentials = ({ username, email }) => {
-    setUsername(username)
-    setEmail(email)
+    checkAuth()
+    router.push("/login")
   }
 
   return (
@@ -46,8 +41,6 @@ export const AuthProvider = ({ children }) => {
         isAuthenticated,
         checkAuth,
         logout,
-        setCredentials,
-        credentials: { username, email },
       }}
     >
       {children}

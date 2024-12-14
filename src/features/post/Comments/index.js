@@ -1,16 +1,16 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import * as S from "./comments.styled"
 import Button from "@/components/Button"
 import { useAuth } from "@/context/AuthContext"
 
-export default function Comments() {
+export default function Comments({ postId }) {
   const [comments, setComments] = useState([])
   const [textAreaValue, setTextAreaValue] = useState("")
   const [errorMessage, setErrorMessage] = useState(null)
-  const { isAuthenticated, credentials } = useAuth()
+  const { isAuthenticated } = useAuth()
 
   const handleSubmit = async () => {
     if (!isAuthenticated) {
@@ -26,26 +26,41 @@ export default function Comments() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({
-          username: credentials.username,
-          email: credentials.email,
-          textAreaValue,
+          content: textAreaValue,
+          postId,
         }),
       }
     )
 
     const data = await response.json()
-    console.log("data: ", data)
 
     setComments((prevState) => [
       ...prevState,
       {
         text: textAreaValue,
-        author: username,
+        author: data.author,
       },
     ])
   }
+
+  useEffect(() => {
+    const getInitialComments = async () => {
+      const data = await fetch(
+        `${process.env.NEXT_PUBLIC_LOCAL_API_URL}/comments/${postId}`
+      )
+
+      const comments = await data.json()
+
+      console.log("comments: ", comments)
+
+      setComments(comments)
+    }
+
+    getInitialComments()
+  }, [])
 
   return (
     <>
@@ -57,11 +72,11 @@ export default function Comments() {
         </S.CommentSection>
         <S.ErrorMessage>{errorMessage}</S.ErrorMessage>
 
-        {comments.map((comment, index) => {
+        {comments?.map((comment, index) => {
           return (
             <div key={index} style={{ textAlign: "left" }}>
-              <p>{comment.text}</p>
               <p>{comment.author}</p>
+              <p>{comment.text}</p>
             </div>
           )
         })}

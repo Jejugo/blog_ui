@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form"
 
 import * as S from "./styles/page.styles"
 import Button from "@/components/Button"
-import { useAuth } from "@/context/AuthContext"
 
 export default function Login() {
   const {
@@ -16,7 +15,6 @@ export default function Login() {
     formState: { errors },
   } = useForm()
   const [message, setMessage] = useState("")
-  const { setCrendetials } = useAuth()
   const router = useRouter()
 
   const onSubmit = async (data) => {
@@ -35,11 +33,7 @@ export default function Login() {
 
     if (res.ok) {
       localStorage.setItem("token", result.token)
-      setCrendetials({
-        username: result.username,
-        email: result.email,
-      })
-      window.location.href = "/"
+      router.push("/")
     } else {
       setMessage(result.message || "Login failed")
     }
@@ -63,10 +57,6 @@ export default function Login() {
       if (res.ok) {
         setMessage("Google login successful!")
         localStorage.setItem("token", result.token)
-        setCrendetials({
-          username: result.username,
-          email: result.email,
-        })
 
         router.push("/")
       }

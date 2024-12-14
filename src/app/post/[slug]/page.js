@@ -35,7 +35,7 @@ export default async function Post({ params }) {
       <Flex gap="50px" alignItems="flex-start">
         <div style={{ flex: 5 }}>
           <PostContent text={post?.content} />
-          <Comments />
+          <Comments postId={slug} />
         </div>
         <SideBar>
           <MostPopular />
