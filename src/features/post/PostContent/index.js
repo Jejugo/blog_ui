@@ -1,6 +1,8 @@
+import { PostContentStyled } from "./PostContent.styles"
+
 export default function PostContent({ text }) {
   return (
-    <div
+    <PostContentStyled
       dangerouslySetInnerHTML={{ __html: text }}
       style={{ textAlign: "left" }}
     />

@@ -1,11 +1,13 @@
 "use client"
 
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 
 import * as S from "./styles/page.styles"
 import Button from "@/components/Button"
+import { useAuth } from "@/context/AuthContext"
 
 export default function Login() {
   const {
@@ -14,6 +16,8 @@ export default function Login() {
     formState: { errors },
   } = useForm()
   const [message, setMessage] = useState("")
+  const { setCrendetials } = useAuth()
+  const router = useRouter()
 
   const onSubmit = async (data) => {
     const res = await fetch(
@@ -30,9 +34,11 @@ export default function Login() {
     const result = await res.json()
 
     if (res.ok) {
-      setMessage("Login successful!")
       localStorage.setItem("token", result.token)
-
+      setCrendetials({
+        username: result.username,
+        email: result.email,
+      })
       window.location.href = "/"
     } else {
       setMessage(result.message || "Login failed")
@@ -57,7 +63,12 @@ export default function Login() {
       if (res.ok) {
         setMessage("Google login successful!")
         localStorage.setItem("token", result.token)
-        window.location.href = "/"
+        setCrendetials({
+          username: result.username,
+          email: result.email,
+        })
+
+        router.push("/")
       }
 
       if (result.error.code === "ER_DUP_ENTRY") {

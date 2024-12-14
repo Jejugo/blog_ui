@@ -7,7 +7,8 @@ import Flex from "@/components/Flex"
 import breakpoint from "@/styles/breakpoints"
 
 export const Title = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.large};
+  font-size: ${({ theme }) => theme.fontSizes.xxlarge};
+  font-weight: ${({ theme }) => theme.fontSizes.normal};
   text-align: left;
   margin: 0;
   line-height: 2;

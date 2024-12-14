@@ -19,3 +19,7 @@ export const CommentSection = styled(Flex)`
     justify-content: center;
   }
 `
+
+export const ErrorMessage = styled.p`
+  text-align: left;
+`

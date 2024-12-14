@@ -7,6 +7,8 @@ const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [username, setUsername] = useState(null)
+  const [email, setEmail] = useState(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -28,8 +30,26 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+  const logout = () => {
+    localStorage.removeItem("token")
+    router.push("/")
+  }
+
+  const setCredentials = ({ username, email }) => {
+    setUsername(username)
+    setEmail(email)
+  }
+
   return (
-    <AuthContext.Provider value={{ isAuthenticated, checkAuth }}>
+    <AuthContext.Provider
+      value={{
+        isAuthenticated,
+        checkAuth,
+        logout,
+        setCredentials,
+        credentials: { username, email },
+      }}
+    >
       {children}
     </AuthContext.Provider>
   )

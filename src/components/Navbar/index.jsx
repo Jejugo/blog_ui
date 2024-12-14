@@ -38,7 +38,7 @@ const socialIcons = [
 
 export default function Navbar() {
   const { toggleTheme, theme } = useTheme()
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated, logout } = useAuth()
   const pathname = usePathname()
   const [isOpen, setOpen] = useState(false)
 
@@ -77,9 +77,12 @@ export default function Navbar() {
           <S.LinkPages href="/contact">Contact</S.LinkPages>
           <S.LinkPages href="/about">About</S.LinkPages>
           {isAuthenticated ? (
-            <S.LinkPages href="/write">Write</S.LinkPages>
+            <>
+              <S.LinkPages href="/write">Write</S.LinkPages>
+              <S.AnchorLink onClick={logout}>Log out</S.AnchorLink>
+            </>
           ) : (
-            <S.LinkPages href="/login">Login</S.LinkPages>
+            <S.LinkPages href="/login">Log in</S.LinkPages>
           )}
         </S.Buttons>
       </S.Main>

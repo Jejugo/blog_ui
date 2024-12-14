@@ -5,6 +5,7 @@ import MostPopular from "@/components/SideBar/MostPopular"
 import { SideBar } from "@/components/SideBar/SideBar.style"
 import Comments from "@/features/post/Comments"
 import PostContent from "@/features/post/PostContent"
+import SuperNueva from "@/images/supernueva.jpg"
 
 const getData = async (slug) => {
   const response = await fetch(`http://localhost:4000/posts/${slug}`)
@@ -21,20 +22,19 @@ export default async function Post({ params }) {
     <Flex flexDirection="column">
       <S.PostHeader gap="20px">
         <Flex flexDirection="column" justifyContent="space-between" flex={1}>
-          <S.Title>{post.title}</S.Title>
-          <S.Text>{post.author}</S.Text>
+          <S.Title>{post?.title}</S.Title>
+          <S.Text>{post?.author}</S.Text>
         </Flex>
         <S.StyledImage
-          src={post.image}
-          alt={post.title}
+          src={post?.image || SuperNueva}
+          alt={post?.title}
           height={250}
           width={250}
         />
       </S.PostHeader>
       <Flex gap="50px" alignItems="flex-start">
         <div style={{ flex: 5 }}>
-          <h1>Content</h1>
-          <PostContent text={post.text} />
+          <PostContent text={post?.content} />
           <Comments />
         </div>
         <SideBar>
